@@ -48,3 +48,21 @@ rules:
   - DOMAIN-SUFFIX,google.fr,PROXY
   - DOMAIN-SUFFIX,google.ca,PROXY
   - DOMAIN-SUFFIX,google.com.br,PROXY
+  - DOMAIN-SUFFIX,openai.com,PROXY
+  - DOMAIN-SUFFIX,chatgpt.com,PROXY
+  - DOMAIN-SUFFIX,oaistatic.com,PROXY
+  - DOMAIN-SUFFIX,oaiusercontent.com,PROXY
+  - DOMAIN-SUFFIX,oaistatsig.com,PROXY
+  - DOMAIN-SUFFIX,openaimerge.com,PROXY
+  - DOMAIN-SUFFIX,ct.sendgrid.net,PROXY
+  - DOMAIN-SUFFIX,intercom.io,PROXY
+  - DOMAIN-SUFFIX,intercomcdn.com,PROXY
+  - DOMAIN-SUFFIX,workos.com,PROXY
+  - DOMAIN-SUFFIX,workoscdn.com,PROXY
+  - DOMAIN-SUFFIX,workos.imgix.net,PROXY
+  - DOMAIN-SUFFIX,challenges.cloudflare.com,PROXY
+  - DOMAIN-SUFFIX,js.stripe.com,PROXY
+  - DOMAIN-SUFFIX,o207216.ingest.sentry.io,PROXY
+  - DOMAIN-SUFFIX,o33249.ingest.sentry.io,PROXY
+  - DOMAIN-SUFFIX,rum.browser-intake-datadoghq.com,PROXY
+  - DOMAIN-SUFFIX,humb.apple.com,PROXY

@@ -66,3 +66,25 @@ rules:
   - DOMAIN-SUFFIX,o33249.ingest.sentry.io,PROXY
   - DOMAIN-SUFFIX,rum.browser-intake-datadoghq.com,PROXY
   - DOMAIN-SUFFIX,humb.apple.com,PROXY
+  - DOMAIN-SUFFIX,x.ai,PROXY
+  - DOMAIN-SUFFIX,grok.com,PROXY
+  - DOMAIN-SUFFIX,grok.x.ai,PROXY
+  - DOMAIN-SUFFIX,api.x.ai,PROXY
+  - DOMAIN-SUFFIX,x.com,PROXY
+  - DOMAIN-SUFFIX,twitter.com,PROXY
+  - DOMAIN-SUFFIX,twimg.com,PROXY
+  - DOMAIN-SUFFIX,t.co,PROXY
+  - DOMAIN-SUFFIX,pscp.tv,PROXY
+  - DOMAIN-SUFFIX,cursor.com,PROXY
+  - DOMAIN-SUFFIX,cursor.sh,PROXY
+  - DOMAIN-SUFFIX,cursor-cdn.com,PROXY
+  - DOMAIN-SUFFIX,cursorapi.com,PROXY
+  - DOMAIN-SUFFIX,anysphere.inc,PROXY
+  - DOMAIN-SUFFIX,github.com,PROXY
+  - DOMAIN-SUFFIX,githubusercontent.com,PROXY
+  - DOMAIN-SUFFIX,githubassets.com,PROXY
+  - DOMAIN-SUFFIX,github.io,PROXY
+  - DOMAIN-SUFFIX,ghcr.io,PROXY
+  - DOMAIN-SUFFIX,openrouter.ai,PROXY
+  - DOMAIN-SUFFIX,ipinfo.io,PROXY
+  - DOMAIN-SUFFIX,ipwho.is,PROXY

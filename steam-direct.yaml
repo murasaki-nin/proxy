@@ -1,0 +1,8 @@
+# Steam 下载直连规则 (WMSXWD)
+# 用法: 在客户端的自定义分流规则里作为远程规则源引用, 并放在 Google 等代理规则之前。
+# 只把下载/内容分发域名直连, 商店/社区/登录 (steampowered.com / steamcommunity.com / steamstatic.com) 仍走代理, 别加进来。
+# 注意: 这只管 Steam 客户端自己的游戏下载/更新, 不管边狱巴士游戏内的 16.67GB 数据下载 (那是月计自己的服务器, 规则拦不住, 更新时直接关代理下)。
+rules:
+  - DOMAIN-SUFFIX,steamcontent.com,DIRECT
+  - DOMAIN-SUFFIX,steambroadcast.akamaized.net,DIRECT
+  - DOMAIN-SUFFIX,steamloopback.host,DIRECT

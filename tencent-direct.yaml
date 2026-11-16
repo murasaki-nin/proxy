@@ -1,0 +1,8 @@
+# Tencent / 王者万象棋直连规则 (WMSXWD)
+# 用法: 在客户端的自定义分流规则里作为远程规则源引用, 并放在 Google 等代理规则之前。
+# DOMAIN 规则只拦得住域名流量, 游戏很多是直连 IP 的 UDP, 所以最后的 GEOIP,CN,DIRECT 是关键。
+rules:
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,wxq.qq.com,DIRECT
+  - GEOIP,CN,DIRECT

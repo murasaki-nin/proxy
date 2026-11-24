@@ -1,0 +1,84 @@
+# 整合版规则 (WMSXWD) - 一个文件顶原来四个
+# 用法: 在客户端的远程规则 URL 里只留这一个, 把原来 google-rules / tencent-direct / steam-direct / zzz-direct 四个远程源都删掉, 否则会重复。
+# 顺序已在文件里排好, 不用再拖动排序: 直连域名在前, 代理域名在中, 最后 GEOIP,CN,DIRECT 兜底国内 IP 的 UDP 流量 (绝区零战斗流量就靠这条)。
+# 直连: 绝区零国服 (mihoyo.com / mhyurl.cn / fastcdn.hoyoverse.com)、腾讯 (qq.com / tencent.com)、Steam 下载。
+# 代理: Google / OpenAI 等 67 条, 原样照搬 google-rules.yaml。
+# 注意: 不要把 hoyoverse.com / hoyolab.com 整段加进来, 国际服仍走代理; 全局模式下所有规则都不生效, 必须用智能模式/规则模式。
+rules:
+  - DOMAIN-SUFFIX,mihoyo.com,DIRECT
+  - DOMAIN-SUFFIX,mhyurl.cn,DIRECT
+  - DOMAIN,fastcdn.hoyoverse.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,wxq.qq.com,DIRECT
+  - DOMAIN-SUFFIX,steamcontent.com,DIRECT
+  - DOMAIN-SUFFIX,steambroadcast.akamaized.net,DIRECT
+  - DOMAIN-SUFFIX,steamloopback.host,DIRECT
+  - DOMAIN-SUFFIX,google.com,PROXY
+  - DOMAIN-SUFFIX,googleapis.com,PROXY
+  - DOMAIN-SUFFIX,googleusercontent.com,PROXY
+  - DOMAIN-SUFFIX,gstatic.com,PROXY
+  - DOMAIN-SUFFIX,ggpht.com,PROXY
+  - DOMAIN-SUFFIX,android.com,PROXY
+  - DOMAIN-SUFFIX,gvt1.com,PROXY
+  - DOMAIN-SUFFIX,gvt2.com,PROXY
+  - DOMAIN-SUFFIX,gvt3.com,PROXY
+  - DOMAIN-SUFFIX,google-analytics.com,PROXY
+  - DOMAIN-SUFFIX,1e100.net,PROXY
+  - DOMAIN-SUFFIX,googlezip.net,PROXY
+  - DOMAIN-SUFFIX,googlevideo.com,PROXY
+  - DOMAIN-SUFFIX,googleadservices.com,PROXY
+  - DOMAIN-SUFFIX,googlemail.com,PROXY
+  - DOMAIN-SUFFIX,gmail.com,PROXY
+  - DOMAIN-SUFFIX,appspot.com,PROXY
+  - DOMAIN-SUFFIX,firebaseio.com,PROXY
+  - DOMAIN-SUFFIX,youtube.com,PROXY
+  - DOMAIN-SUFFIX,youtu.be,PROXY
+  - DOMAIN-SUFFIX,youtube-nocookie.com,PROXY
+  - DOMAIN-SUFFIX,ytimg.com,PROXY
+  - DOMAIN-SUFFIX,youtubeeducation.com,PROXY
+  - DOMAIN-SUFFIX,googledrive.com,PROXY
+  - DOMAIN-SUFFIX,googlegroups.com,PROXY
+  - DOMAIN-SUFFIX,g.co,PROXY
+  - DOMAIN-SUFFIX,goo.gl,PROXY
+  - DOMAIN-SUFFIX,blog.google,PROXY
+  - DOMAIN-SUFFIX,withgoogle.com,PROXY
+  - DOMAIN-SUFFIX,firebaseapp.com,PROXY
+  - DOMAIN-SUFFIX,firebasestorage.app,PROXY
+  - DOMAIN-SUFFIX,web.app,PROXY
+  - DOMAIN-SUFFIX,googlesyndication.com,PROXY
+  - DOMAIN-SUFFIX,googletagmanager.com,PROXY
+  - DOMAIN-SUFFIX,googletagservices.com,PROXY
+  - DOMAIN-SUFFIX,doubleclick.net,PROXY
+  - DOMAIN-SUFFIX,recaptcha.net,PROXY
+  - DOMAIN-SUFFIX,google.com.hk,PROXY
+  - DOMAIN-SUFFIX,google.com.tw,PROXY
+  - DOMAIN-SUFFIX,google.com.sg,PROXY
+  - DOMAIN-SUFFIX,google.co.jp,PROXY
+  - DOMAIN-SUFFIX,google.co.uk,PROXY
+  - DOMAIN-SUFFIX,google.co.in,PROXY
+  - DOMAIN-SUFFIX,google.com.au,PROXY
+  - DOMAIN-SUFFIX,google.co.kr,PROXY
+  - DOMAIN-SUFFIX,google.de,PROXY
+  - DOMAIN-SUFFIX,google.fr,PROXY
+  - DOMAIN-SUFFIX,google.ca,PROXY
+  - DOMAIN-SUFFIX,google.com.br,PROXY
+  - DOMAIN-SUFFIX,openai.com,PROXY
+  - DOMAIN-SUFFIX,chatgpt.com,PROXY
+  - DOMAIN-SUFFIX,oaistatic.com,PROXY
+  - DOMAIN-SUFFIX,oaiusercontent.com,PROXY
+  - DOMAIN-SUFFIX,oaistatsig.com,PROXY
+  - DOMAIN-SUFFIX,openaimerge.com,PROXY
+  - DOMAIN-SUFFIX,ct.sendgrid.net,PROXY
+  - DOMAIN-SUFFIX,intercom.io,PROXY
+  - DOMAIN-SUFFIX,intercomcdn.com,PROXY
+  - DOMAIN-SUFFIX,workos.com,PROXY
+  - DOMAIN-SUFFIX,workoscdn.com,PROXY
+  - DOMAIN-SUFFIX,workos.imgix.net,PROXY
+  - DOMAIN-SUFFIX,challenges.cloudflare.com,PROXY
+  - DOMAIN-SUFFIX,js.stripe.com,PROXY
+  - DOMAIN-SUFFIX,o207216.ingest.sentry.io,PROXY
+  - DOMAIN-SUFFIX,o33249.ingest.sentry.io,PROXY
+  - DOMAIN-SUFFIX,rum.browser-intake-datadoghq.com,PROXY
+  - DOMAIN-SUFFIX,humb.apple.com,PROXY
+  - GEOIP,CN,DIRECT

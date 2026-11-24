@@ -1,8 +1,8 @@
-# 整合版规则 (WMSXWD) - 一个文件顶原来四个
+# 整合版规则 (WMSXWD) - 一个文件顶原来五个
 # 用法: 在客户端的远程规则 URL 里只留这一个, 把原来 google-rules / tencent-direct / steam-direct / zzz-direct 四个远程源都删掉, 否则会重复。
 # 顺序已在文件里排好, 不用再拖动排序: 直连域名在前, 代理域名在中, 最后 GEOIP,CN,DIRECT 兜底国内 IP 的 UDP 流量 (绝区零战斗流量就靠这条)。
 # 直连: 绝区零国服 (mihoyo.com / mhyurl.cn / fastcdn.hoyoverse.com)、腾讯 (qq.com / tencent.com)、Steam 下载。
-# 代理: Google / OpenAI 等 67 条, 原样照搬 google-rules.yaml。
+# 代理: Google / OpenAI 等 67 条原样照搬 google-rules.yaml, 再加客户端里原有的 22 条 (X / Grok / Cursor / GitHub / OpenRouter / IP 查询), 一共 89 条代理。
 # 注意: 不要把 hoyoverse.com / hoyolab.com 整段加进来, 国际服仍走代理; 全局模式下所有规则都不生效, 必须用智能模式/规则模式。
 rules:
   - DOMAIN-SUFFIX,mihoyo.com,DIRECT
@@ -81,4 +81,26 @@ rules:
   - DOMAIN-SUFFIX,o33249.ingest.sentry.io,PROXY
   - DOMAIN-SUFFIX,rum.browser-intake-datadoghq.com,PROXY
   - DOMAIN-SUFFIX,humb.apple.com,PROXY
+  - DOMAIN-SUFFIX,x.ai,PROXY
+  - DOMAIN-SUFFIX,grok.com,PROXY
+  - DOMAIN-SUFFIX,grok.x.ai,PROXY
+  - DOMAIN-SUFFIX,api.x.ai,PROXY
+  - DOMAIN-SUFFIX,x.com,PROXY
+  - DOMAIN-SUFFIX,twitter.com,PROXY
+  - DOMAIN-SUFFIX,twimg.com,PROXY
+  - DOMAIN-SUFFIX,t.co,PROXY
+  - DOMAIN-SUFFIX,pscp.tv,PROXY
+  - DOMAIN-SUFFIX,cursor.com,PROXY
+  - DOMAIN-SUFFIX,cursor.sh,PROXY
+  - DOMAIN-SUFFIX,cursor-cdn.com,PROXY
+  - DOMAIN-SUFFIX,cursorapi.com,PROXY
+  - DOMAIN-SUFFIX,anysphere.inc,PROXY
+  - DOMAIN-SUFFIX,github.com,PROXY
+  - DOMAIN-SUFFIX,githubusercontent.com,PROXY
+  - DOMAIN-SUFFIX,githubassets.com,PROXY
+  - DOMAIN-SUFFIX,github.io,PROXY
+  - DOMAIN-SUFFIX,ghcr.io,PROXY
+  - DOMAIN-SUFFIX,openrouter.ai,PROXY
+  - DOMAIN-SUFFIX,ipinfo.io,PROXY
+  - DOMAIN-SUFFIX,ipwho.is,PROXY
   - GEOIP,CN,DIRECT

@@ -1,0 +1,11 @@
+# 绝区零国服直连规则 (WMSXWD)
+# 用法: 在客户端的自定义分流规则里作为远程规则源引用, 并放在 Google 等代理规则之前。
+# 国服不用走代理, 走美国节点会绕一大圈, 延迟高、丢包, 游戏内网络就红格一格。
+# DOMAIN 规则只拦得住域名流量 (登录/启动器/更新), 战斗流量很多是直连 IP 的 UDP, 所以最后的 GEOIP,CN,DIRECT 是关键。
+# 注意: 不要把 hoyoverse.com / hoyolab.com 整段加进来, 国际服的 Hoyoverse 仍走代理, 只有 fastcdn.hoyoverse.com 是国服页面引用的, 单独直连。
+# 注意: 这只管绝区零国服官服, 不管国际服, 也不含 B 服; 如果你在全局模式下, 所有规则都不生效, 必须先切回智能模式/规则模式。
+rules:
+  - DOMAIN-SUFFIX,mihoyo.com,DIRECT
+  - DOMAIN-SUFFIX,mhyurl.cn,DIRECT
+  - DOMAIN,fastcdn.hoyoverse.com,DIRECT
+  - GEOIP,CN,DIRECT

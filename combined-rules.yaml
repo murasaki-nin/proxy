@@ -1,13 +1,14 @@
 # 整合版规则 (WMSXWD) - 一个文件顶原来五个
 # 用法: 在客户端的远程规则 URL 里只留这一个, 把原来 google-rules / tencent-direct / steam-direct / zzz-direct 四个远程源都删掉, 否则会重复。
 # 顺序已在文件里排好, 不用再拖动排序: 直连域名在前, 代理域名在中, 最后 GEOIP,CN,DIRECT 兜底国内 IP 的 UDP 流量 (绝区零战斗流量就靠这条)。
-# 直连: 绝区零国服 (mihoyo.com / mhyurl.cn / fastcdn.hoyoverse.com)、腾讯 (qq.com / tencent.com)、Steam 下载。
+# 直连: 绝区零国服 (mihoyo.com / mhyurl.cn / hoyoverse.com 整段, 2026-11-25 新增: Sophon 下载分片和加载配置数据的 CDN 走 hoyoverse.com 其他子域名, 只留 fastcdn 不够, 曾卡在加载配置 74.97% / 校验 53%)、腾讯 (qq.com / tencent.com)、Steam 下载。
 # 代理: Google / OpenAI 等 67 条原样照搬 google-rules.yaml, 再加客户端里原有的 22 条 (X / Grok / Cursor / GitHub / OpenRouter / IP 查询), 一共 89 条代理。
-# 注意: 不要把 hoyoverse.com / hoyolab.com 整段加进来, 国际服仍走代理; 全局模式下所有规则都不生效, 必须用智能模式/规则模式。
+# 注意: 不要把 hoyolab.com 整段加进来; 全局模式下所有规则都不生效, 必须用智能模式/规则模式。另: TUN 开着会抓走 UDP / 直连 IP 流量, 玩绝区零 / 更新校验时建议关 TUN 或关代理直连。
 rules:
   - DOMAIN-SUFFIX,mihoyo.com,DIRECT
   - DOMAIN-SUFFIX,mhyurl.cn,DIRECT
   - DOMAIN,fastcdn.hoyoverse.com,DIRECT
+  - DOMAIN-SUFFIX,hoyoverse.com,DIRECT
   - DOMAIN-SUFFIX,qq.com,DIRECT
   - DOMAIN-SUFFIX,tencent.com,DIRECT
   - DOMAIN-SUFFIX,wxq.qq.com,DIRECT
